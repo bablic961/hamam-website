@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета — Хамам</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <img src="images/logo.jpg" alt="Логотип Хамама" class="logo">
+                <h1>ХАМАМ™</h1>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="history.html">История</a>
+                <a href="members.html">Участники</a>
+                <a href="anketa.html" class="active">Анкета</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="form-section">
+            <h3>Официальная анкета группы "Хамам"</h3>
+            <p>
+                Заполните эту анкету, чтобы стать почётным другом группы "Хамам"!
+                Ваши данные будут сохранены локально на вашем устройстве.
+            </p>
+
+            <form id="anketa-form">
+                <div class="form-group">
+                    <label for="name">Ваше имя/ник *</label>
+                    <input type="text" id="name" name="name" required placeholder="Например: IvanTheTerrible">
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Желаемая должность в "Хамаме" *</label>
+                    <select id="position" name="position" required>
+                        <option value="">Выберите должность...</option>
+                        <option value="Пошла возня!">Пошла возня!</option>
+                        <option value="Бем-бем-бем!">Бем-бем-бем!</option>
+                        <option value="Изи бриджи">Изи бриджи</option>
+                        <option value="Давай, до свидания!">Давай, до свидания!</option>
+                        <option value="Работаем, братья, работаем!">Работаем, братья, работаем!</option>
+                        <option value="Просто лучший, лучший!">Просто лучший, лучший!</option>
+                        <option value="Ещё посидим, ещё посидим">Ещё посидим, ещё посидим</option>
+                        <option value="Всё, отдыхай">Всё, отдыхай</option>
+                        <option value="Другая">Другая (напишите в цитате)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quote">Ваша любимая цитата или мем *</label>
+                    <textarea id="quote" name="quote" required placeholder="Например: 'Персик сливы виноград я помылся омайгад'"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="game">Любимая игра</label>
+                    <input type="text" id="game" name="game" placeholder="Например: PEAK">
+                </div>
+
+                <div class="form-group">
+                    <label for="skill">Ваш главный навык *</label>
+                    <select id="skill" name="skill" required>
+                        <option value="">Выберите навык...</option>
+                        <option value="Прохожу за всю команду">Прохожу за всю команду</option>
+                        <option value="Нахожу лучшие объявления">Нахожу лучшие объявления</option>
+                        <option value="Придумываю названия">Придумываю названия</option>
+                        <option value="Дружу с основателями">Дружу с основателями</option>
+                        <option value="Создаю мосты между людьми">Создаю мосты между людьми</option>
+                        <option value="Пишу в Discord 24/7">Пишу в Discord 24/7</option>
+                        <option value="Находящий баги">Нахожу баги</option>
+                        <option value="Мастер мемов">Мастер мемов</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="why">Почему вы хотите стать частью "Хамама"? *</label>
+                    <textarea id="why" name="why" required placeholder="Расскажите нам свою историю..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Опыт игры в команде (лет)</label>
+                    <input type="number" id="experience" name="experience" min="0" max="99" placeholder="0">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Отправить анкету</button>
+                    <button type="reset" class="btn btn-secondary">Очистить</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="result-section" class="hidden">
+            <h3>Ваша анкета сохранена!</h3>
+            <div class="anketa-result" id="result-content"></div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button id="edit-btn" class="btn">Редактировать анкету</button>
+                <button id="delete-btn" class="btn btn-secondary">Удалить анкету</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="images/logo.jpg" alt="Логотип Хамама">
+                <p>© 2026 Хамам™. Все права как бы защищены.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="history.html">История</a>
+                <a href="members.html">Участники</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

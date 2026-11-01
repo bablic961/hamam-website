@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хамам — Официальный сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <img src="images/logo.jpg" alt="Логотип Хамама" class="logo">
+                <h1>ХАМАМ™</h1>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="history.html">История</a>
+                <a href="members.html">Участники</a>
+                <a href="anketa.html">Анкета</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <img src="images/logo.jpg" alt="Логотип группы" class="hero-logo">
+            <h2>Официальный сайт группы "Хамам"</h2>
+            <p class="tagline">Также известной как "Хаммамм"</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Участника</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2026</span>
+                    <span class="stat-label">Год основания</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="days-counter">0</span>
+                    <span class="stat-label">Дней без ссор*</span>
+                </div>
+            </div>
+            <p class="disclaimer">*Статистика может быть неточной</p>
+        </section>
+
+        <section class="about">
+            <h3>О нас</h3>
+            <p>
+                Мы — группа из четырёх друзей, которые познакомились в игре PEAK в 2026 году
+                и с тех пор покоряем игровые миры вместе. От случайных напарников до настоящей
+                команды — наша история началась с объявления в PEAK, где Losok_Shirokiy и Гриб
+                попали в одну катку, подружились, и всё началось.
+            </p>
+            <p>
+                Название "Хамам" родилось благодаря Изумруду, который начал так называть нашего
+                основателя Losok_Shirokiy. Теперь это имя объединяет всех нас.
+            </p>
+        </section>
+
+        <section class="members-preview">
+            <h3>Наша команда</h3>
+            <div class="members-grid">
+                <a href="losok_shirokiy.html" class="member-card">
+                    <img src="images/losok.png" alt="Losok_Shirokiy">
+                    <h4>Losok_Shirokiy</h4>
+                    <p>Турецкую баню прогрей (Хаммам)</p>
+                </a>
+                <a href="grib.html" class="member-card">
+                    <img src="images/grib.png" alt="Гриб">
+                    <h4>Гриб</h4>
+                    <p>Генерал Чекушек</p>
+                </a>
+                <a href="izumrud.html" class="member-card">
+                    <img src="images/izumrud.png" alt="Изумруд">
+                    <h4>Изумруд</h4>
+                    <p>Спасибо, хорошо</p>
+                </a>
+                <a href="mark.html" class="member-card">
+                    <img src="images/mark.png" alt="Марк">
+                    <h4>Марк</h4>
+                    <p>Я щаперт на этом острове из-за Интерпола</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h3>Хотите присоединиться?</h3>
+            <p>Заполните нашу официальную анкету!</p>
+            <a href="anketa.html" class="btn">Заполнить анкету</a>
+        </section>
+
+        <section class="easter-egg">
+            <button id="secret-btn" class="secret-button">НЕ НАЖИМАТЬ</button>
+            <div id="secret-message" class="hidden">
+                <p>🎉 Вы нашли секретное сообщение!</p>
+                <p>"Персик сливы виноград я помылся омайгад" — Losok_Shirokiy, 2026</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="images/logo.jpg" alt="Логотип Хамама">
+                <p>© 2026 Хамам™. Все права как бы защищены.</p>
+            </div>
+            <div class="footer-links">
+                <a href="history.html">История</a>
+                <a href="members.html">Участники</a>
+                <a href="anketa.html">Анкета</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Счётчик дней без ссор
+        const startDate = new Date('2026-01-01');
+        const today = new Date();
+        const days = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+        document.getElementById('days-counter').textContent = days;
+
+        // Секретная кнопка
+        document.getElementById('secret-btn').addEventListener('click', function() {
+            const message = document.getElementById('secret-message');
+            message.classList.toggle('hidden');
+            this.textContent = message.classList.contains('hidden') ? 'НЕ НАЖИМАТЬ' : 'СКРЫТЬ';
+        });
+    </script>
+</body>
+</html>
